@@ -5,7 +5,6 @@
 
     <parameters>
         <parameter key="f_devs_routing.admin_extension.route_referrers.class">FDevs\RoutingBundle\Sonata\Extension\ParentRouteExtension</parameter>
-        <parameter key="f_devs_routing.route_admin.class">FDevs\RoutingBundle\Sonata\Admin\RouteMongodbAdmin</parameter>
     </parameters>
 
     <services>
@@ -14,16 +13,6 @@
             <tag name="sonata.admin.extension"/>
             <call method="setRouteManager"><argument type="service" id="f_devs_routing.route_manager"/></call>
             <call method="setRequirementsLocale"><argument>%requirements.locales%</argument></call>
-        </service>
-
-        <service id="f_devs_routing.route_admin" class="%f_devs_routing.route_admin.class%">
-            <tag name="sonata.admin"
-                 manager_type="doctrine_mongodb" group="dashboard.cmf"
-                 label_catalogue="CmfRoutingBundle" label="dashboard.label_routing"
-                 label_translator_strategy="sonata.admin.label.strategy.underscore"/>
-            <argument/>
-            <argument>%f_devs_routing.model.class%</argument>
-            <argument>SonataAdminBundle:CRUD</argument>
         </service>
 
     </services>
