@@ -1,0 +1,10 @@
+form:
+    group_general: Основные
+    group_additional: Дополнительно
+    group_days: Дни
+    group_publish_workflow: Публикация
+    group_routes: 'Маршруты'
+label:
+    route: 'Маршруты'
+    uri: 'Uri'
+    parent: 'Родитель'

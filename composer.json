@@ -1,0 +1,36 @@
+{
+    "name": "fdevs/routing-bundle",
+    "type": "symfony-bundle",
+    "description": "4devs RoutingBundle",
+    "keywords": ["Routing management for mongodb"],
+    "homepage": "https://github.com/4devs/RoutingBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey Samusev",
+            "email": "andrey_simfi@list.ru",
+            "homepage": "http://andrey.4devs.io"
+        },
+        {
+            "name": "4devs Community",
+            "homepage": "https://github.com/4devs/RoutingBundle/contributors"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4",
+        "cocur/slugify": "~0.10",
+        "symfony-cmf/routing-bundle": "~1.3",
+        "doctrine/mongodb-odm-bundle": "~3.0",
+        "doctrine/mongodb-odm": "~1.0"
+
+    },
+    "require-dev": {},
+    "suggest": {
+        "sonata-project/admin-bundle": "for use admin"
+    },
+    "autoload": {
+        "psr-0": {"FDevs\\RoutingBundle": ""}
+    },
+    "target-dir": "FDevs/RoutingBundle"
+}

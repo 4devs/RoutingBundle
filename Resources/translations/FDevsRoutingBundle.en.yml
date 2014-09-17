@@ -1,0 +1,11 @@
+form:
+    group_general: 'General'
+    group_additional: 'Additional'
+    group_days: 'Days'
+    group_publish_workflow: 'Publish Workflow'
+    group_routes: 'Routes'
+
+label:
+    route: "Route"
+    uri: "Uri"
+    parent: "Parent"

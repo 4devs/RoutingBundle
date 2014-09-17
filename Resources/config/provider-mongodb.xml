@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="f_devs_routing.mongodb.content_repository.class">Symfony\Cmf\Bundle\RoutingBundle\Doctrine\Orm\ContentRepository</parameter>
+        <parameter key="f_devs_routing.mongodb_candidates.class">Symfony\Cmf\Component\Routing\Candidates\Candidates</parameter>
+        <parameter key="f_devs_routing.route_provider.class">Symfony\Cmf\Bundle\RoutingBundle\Doctrine\Orm\RouteProvider</parameter>
+    </parameters>
+
+    <services>
+
+        <service id="f_devs_routing.content_repository" class="%f_devs_routing.mongodb.content_repository.class%">
+            <argument type="service" id="doctrine_mongodb"/>
+            <call method="setManagerName"><argument>%f_devs_routing.manager_name%</argument></call>
+        </service>
+
+        <service id="f_devs_routing.mongodb_candidates" class="%f_devs_routing.mongodb_candidates.class%">
+            <argument>%cmf_routing.dynamic.locales%</argument>
+            <argument>%cmf_routing.dynamic.limit_candidates%</argument>
+        </service>
+
+        <service id="f_devs_routing.route_provider" class="%f_devs_routing.route_provider.class%">
+            <argument type="service" id="doctrine_mongodb"/>
+            <argument type="service" id="f_devs_routing.mongodb_candidates"/>
+            <argument>%f_devs_routing.model.class%</argument>
+            <call method="setManagerName"><argument>%f_devs_routing.dynamic.persistence.mongodb.manager_name%</argument></call>
+        </service>
+
+    </services>
+</container>

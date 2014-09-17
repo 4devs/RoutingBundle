@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="f_devs_routing.form_route_parent.class">FDevs\RoutingBundle\Form\Type\ParentRouteType</parameter>
+        <parameter key="f_devs_routing.form_route.class">FDevs\RoutingBundle\Form\Type\RouteType</parameter>
+    </parameters>
+
+    <services>
+
+        <service id="f_devs_routing.form_route" class="%f_devs_routing.form_route.class%">
+            <tag name="form.type" alias="fdevs_route"/>
+        </service>
+
+        <service id="f_devs_routing.form_route_parent" class="%f_devs_routing.form_route_parent.class%">
+            <argument>%f_devs_routing.model.class%</argument>
+            <argument>%f_devs_routing.form_parent.type%</argument>
+            <tag name="form.type" alias="f_devs_parent_route"/>
+        </service>
+
+    </services>
+</container>
