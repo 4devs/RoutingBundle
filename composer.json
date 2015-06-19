@@ -8,7 +8,7 @@
     "authors": [
         {
             "name": "Andrey Samusev",
-            "email": "andrey_simfi@list.ru",
+            "email": "andrey@4devs.org",
             "homepage": "http://andrey.4devs.io"
         },
         {
@@ -16,10 +16,9 @@
             "homepage": "https://github.com/4devs/RoutingBundle/contributors"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4",
-        "cocur/slugify": "~0.10",
+        "cocur/slugify": "~1.0",
         "symfony-cmf/routing-bundle": "~1.3"
     },
     "require-dev": {
@@ -31,7 +30,6 @@
         "doctrine/mongodb-odm-bundle": "To enable support for the Mongodb ODM documents"
     },
     "autoload": {
-        "psr-0": {"FDevs\\RoutingBundle": ""}
-    },
-    "target-dir": "FDevs/RoutingBundle"
+        "psr-4": {"FDevs\\RoutingBundle\\": ""}
+    }
 }
