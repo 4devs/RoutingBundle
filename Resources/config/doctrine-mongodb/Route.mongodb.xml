@@ -8,9 +8,17 @@
               repository-class="FDevs\RoutingBundle\Doctrine\Mongodb\RouteRepository">
 
         <field fieldName="id" id="true" strategy="AUTO"/>
-        <field fieldName="name" type="string" unique="true"/>
 
-        <reference-one field="parent" target-document="FDevs\RoutingBundle\Doctrine\Mongodb\Route" simple="true"/>
+        <indexes>
+            <index unique="true" dropDups="true">
+                <key name="name" order="asc"/>
+                <option name="safe" value="true"/>
+            </index>
+            <index dropDups="true">
+                <key name="staticPrefix" order="asc"/>
+                <option name="safe" value="true"/>
+            </index>
+        </indexes>
 
     </document>
 
