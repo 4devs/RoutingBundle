@@ -7,19 +7,8 @@
 
         <field name="variablePattern" fieldName="variablePattern" type="string" nullable="true"/>
         <field name="staticPrefix" fieldName="staticPrefix" type="string"/>
-
         <reference-one field="content"/>
 
-        <indexes>
-            <index unique="true" dropDups="true">
-                <key name="name" order="asc"/>
-                <option name="safe" value="true"/>
-            </index>
-            <index dropDups="true">
-                <key name="staticPrefix" order="asc"/>
-                <option name="safe" value="true"/>
-            </index>
-        </indexes>
     </mapped-superclass>
 
 </doctrine-mongo-mapping>
