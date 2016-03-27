@@ -1,9 +1,9 @@
 {
     "name": "fdevs/routing-bundle",
     "type": "symfony-bundle",
-    "description": "4devs RoutingBundle",
+    "description": "4devs Routing Bundle",
     "keywords": ["Routing management for mongodb"],
-    "homepage": "https://github.com/4devs/RoutingBundle",
+    "homepage": "https://github.com/4devs/routing-bundle",
     "license": "MIT",
     "authors": [
         {
@@ -13,7 +13,7 @@
         },
         {
             "name": "4devs Community",
-            "homepage": "https://github.com/4devs/RoutingBundle/contributors"
+            "homepage": "https://github.com/4devs/routing-bundle/contributors"
         }
     ],
     "require": {
